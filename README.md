@@ -18,7 +18,7 @@
 
 ## ⚡ Quick Start
 
-### Installation
+### Installation/Usage
 ```bash
 # Via Go install
 go install github.com/romesh0/romeshnotconfused@latest
@@ -26,3 +26,14 @@ go install github.com/romesh0/romeshnotconfused@latest
 # Via releases (recommended)
 curl -L https://github.com/romesh0/romeshnotconfused/releases/latest/download/romeshnotconfused-linux-amd64 -o romeshnotconfused
 chmod +x romeshnotconfused
+
+### Usage
+
+# Scan current directory
+./romeshnotconfused
+
+# high-performance scan
+./romeshnotconfused -t 20 /path/to/project
+
+# JSON output for CI/CD
+./romeshnotconfused -o json . > results.json

@@ -1,5 +1,3 @@
-### **go.mod**
-```go
 module github.com/romesh0/romeshnotconfused
 
 go 1.21

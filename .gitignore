@@ -1,0 +1,50 @@
+# Binaries
+romeshnotconfused
+romeshnotconfused.exe
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Go
+*.o
+*.a
+*.so
+*.test
+*.out
+*.prof
+go.work
+go.work.sum
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Test artifacts
+coverage.out
+coverage.html
+test-results/
+
+# Build artifacts
+dist/
+build/
+bin/
+
+# Runtime
+*.log
+*.pid
+*.seed
+*.pid.lock
+config.local.yml

@@ -112,6 +112,18 @@ func (n *NPMScanner) parsePackageJSON(filename string) ([]Package, error) {
 	}
 
 	var packages []Package
+
+	// Add the project itself as a package
+    if packageJSON.Name != "" && packageJSON.Version != "" {
+        projectPackage := Package{
+            Name:      packageJSON.Name,
+            Version:   packageJSON.Version,
+            Manager:   "npm",
+            File:      filename,
+            IsPrivate: n.isPrivatePackage(packageJSON.Name, packageJSON.Name),
+        }
+        packages = append(packages, projectPackage)
+    }
 	
 	// Parse dependencies
 	for name, version := range packageJSON.Dependencies {

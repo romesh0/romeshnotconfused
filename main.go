@@ -232,7 +232,7 @@ func (n *NPMScanner) CheckPackage(pkg Package, client *http.Client) (*Vulnerabil
 			if pkg.IsPrivate {
 				vuln.Severity = "HIGH"
 				vuln.Description = "Private package name available in public NPM registry"
-				vuln.Recommendation = "Reserve package name in NPM registry or use unique naming"
+				vuln.Recommendation = "Verify if the package is reserved or use unique naming"
 			} else {
 				vuln.Severity = "MEDIUM"
 				vuln.Description = "Package exists in public registry - verify authenticity"

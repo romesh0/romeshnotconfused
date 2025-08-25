@@ -5,7 +5,6 @@ package main
 
 import (
 	"bufio"
-	"context"
 	"crypto/tls"
 	"encoding/json"
 	"fmt"
@@ -16,7 +15,6 @@ import (
 	"path/filepath"
 	"regexp"
 	"sort"
-	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -104,6 +102,7 @@ func (n *NPMScanner) parsePackageJSON(filename string) ([]Package, error) {
 		Dependencies    map[string]string `json:"dependencies"`
 		DevDependencies map[string]string `json:"devDependencies"`
 		Name            string            `json:"name"`
+		Version			string			  `json:"version"`
 	}
 
 	decoder := json.NewDecoder(file)
